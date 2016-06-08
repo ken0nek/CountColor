@@ -8,10 +8,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
 
-    var number = 0
-    @IBOutlet weak var numberLabel: UILabel!
+    private var number = 0
+    @IBOutlet weak private var numberLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,32 +23,32 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func plus() {
+    @IBAction private func plus() {
         number += 1
         handleNumber()
     }
 
-    @IBAction func minus() {
+    @IBAction private func minus() {
         number -= 1
         handleNumber()
     }
 
-    @IBAction func times() {
+    @IBAction private func times() {
         number *= 2
         handleNumber()
     }
 
-    @IBAction func divide() {
+    @IBAction private func divide() {
         number /= 2
         handleNumber()
     }
 
-    @IBAction func clear() {
+    @IBAction private func clear() {
         number = 0
         handleNumber()
     }
 
-    func handleNumber() {
+    private func handleNumber() {
         numberLabel.text = "\(number)"
 
         if number > 0 {
