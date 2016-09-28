@@ -11,7 +11,7 @@ import UIKit
 final class ViewController: UIViewController {
 
     private var number = 0
-    @IBOutlet weak private var numberLabel: UILabel!
+    @IBOutlet private weak var numberLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,11 +52,11 @@ final class ViewController: UIViewController {
         numberLabel.text = "\(number)"
 
         if number > 0 {
-            numberLabel.textColor = UIColor.blueColor()
+            numberLabel.textColor = .blue
         } else if number == 0 {
-            numberLabel.textColor = UIColor.blackColor()
+            numberLabel.textColor = .black
         } else {
-            numberLabel.textColor = UIColor.redColor()
+            numberLabel.textColor = .red
         }
     }
 }
